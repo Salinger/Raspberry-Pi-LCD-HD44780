@@ -6,6 +6,7 @@ Ver.   : 1.0.0
 
 [How to use]
 1. Initialize
+import lcd
 l = lcd.HD44780()
 
 2. Call string method 
