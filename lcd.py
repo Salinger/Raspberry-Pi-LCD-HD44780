@@ -5,7 +5,7 @@
 #
 # Author : Salinger
 # Date   : 01/05/2013
-# Ver.   : 1.0.0
+# Ver.   : 1.1.0
 
 #
 # How to use this module in main().
@@ -210,7 +210,7 @@ class JapaneseCharacter(object):
         u'ま' :0xCF, u'み' :0xD0, u'む' :0xD1, u'め' :0xD2, u'も' :0xD3,
         u'や' :0xD4, u'ゆ' :0xD5, u'よ' :0xD6, u'゜' :0xDF, u'゛' :0xDE,
         u'ら' :0xD7, u'り' :0xD8, u'る' :0xD9, u'れ' :0xDA, u'ろ' :0xDB,
-        u'わ' :0xDC, u'ん' :0xDD, u'っ' :0xAF, u'　' :0xA0,
+        u'わ' :0xDC, u'ん' :0xDD, u'っ' :0xAF, u'　' :0xA0, u' ' :0xA0,
         u'、' :0xA4, u'・' :0xA5, u'ぁ' :0xA7, u'ぃ' :0xA8, u'ぅ' :0xA9,
         u'ぇ' :0xAA, u'ぉ' :0xAB, u'ゃ' :0xAC, u'ゅ' :0xAD, u'ょ' :0xAE,
         u'が' :0xB6, u'ぎ' :0xB7, u'ぐ' :0xB8, u'げ' :0xB9, u'ご' :0xBA,
@@ -221,6 +221,18 @@ class JapaneseCharacter(object):
         u'を' :0xA6 ,u'ー' :0xB0
         }
 
+    def check_length(self,string):
+        # Return Japanese string length on LCD.
+        # If some character can't output, return False.
+        counter = 0
+        for c in string:
+            if c in self.handakuon or c in self.dakuon:
+                counter += 2
+            elif c in self.zen_to_han:
+                counter += 1
+            else:
+                return False
+        return counter
 
 def main():
     # [How to use]
