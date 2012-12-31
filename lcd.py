@@ -4,7 +4,7 @@
 # For HD44780 LCD on Raspberry Pi
 #
 # Author : Salinger
-# Date   : 01/05/2013
+# Date   : 01/14/2013
 # Ver.   : 1.1.0
 
 #

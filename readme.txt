@@ -1,7 +1,7 @@
 For HD44780 LCD on Raspberry Pi
 
 Author : Salinger
-Date   : 01/05/2013
+Date   : 01/14/2013
 Version: 1.1.0
 
 [How to use]
@@ -19,9 +19,12 @@ $ sudo python lcd.py
 If string over 16 chars, it cut off.
 # Notice: "が" is 2 chars. ("か" + "゛")
 
+If you want to know more info, please read source.
+
+
 [History]
-Version: 1.1.0
+Version: 1.1.0 01/14/2013
   Add check length method in JapaneseCharacter class.
 
-Version: 1.0.0
+Version: 1.0.0 01/05/2013
   1st ver.
